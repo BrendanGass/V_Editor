@@ -5,6 +5,7 @@ from tkinter import *
 from tkinter.messagebox import *
 from tkinter.filedialog import *
 from datetime import date
+import keyboard
 currentdate = date.today()  
 class SunmiNotes: 
   
@@ -47,13 +48,13 @@ class SunmiNotes:
         self.__root.grid_rowconfigure(0, weight=1) 
         self.__root.grid_columnconfigure(0, weight=1) 
         self.__thisTextArea.grid(sticky = N + E + S + W) 
-        self.__thisFileMenu.add_command(label="New", 
+        self.__thisFileMenu.add_command(label="New (Ctrl + N)", 
                                         command=self.__newFile)     
           
-        self.__thisFileMenu.add_command(label="Open", 
+        self.__thisFileMenu.add_command(label="Open (Ctrl + O)", 
                                         command=self.__openFile) 
           
-        self.__thisFileMenu.add_command(label="Save", 
+        self.__thisFileMenu.add_command(label="Save (Ctrl + S)", 
                                         command=self.__saveFile)     
   
         self.__thisFileMenu.add_separator()                                          
@@ -88,7 +89,11 @@ class SunmiNotes:
         self.__thisScrollBar.pack(side=RIGHT,fill=Y)                     
              
         self.__thisScrollBar.config(command=self.__thisTextArea.yview)      
-        self.__thisTextArea.config(yscrollcommand=self.__thisScrollBar.set) 
+        self.__thisTextArea.config(yscrollcommand=self.__thisScrollBar.set)
+        
+        keyboard.add_hotkey('ctrl + s', self.__saveFile)
+        keyboard.add_hotkey('ctrl + o', self.__openFile)
+        keyboard.add_hotkey('ctrl + n', self.__newFile)
       
           
     def __quitApplication(self): 
@@ -151,6 +156,8 @@ class SunmiNotes:
             file = open(self.__file,"w") 
             file.write(self.__thisTextArea.get(1.0,END)) 
             file.close() 
+            
+    
   
     def __cut(self): 
         self.__thisTextArea.event_generate("<<Cut>>") 
