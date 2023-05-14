@@ -23,7 +23,7 @@ class SunmiNotes:
   
     def __init__(self,**kwargs): 
         try: 
-                self.__root.wm_iconbitmap("SunmiNotes.ico")  
+                self.__root.wm_iconbitmap("SunmiNotesLogo.ico")  
         except: 
                 pass
   
@@ -101,17 +101,19 @@ class SunmiNotes:
         # exit() 
   
     def __showAbout(self): 
-        showinfo("SunmiNotes","This program is written in Python using Tkinter. It's a fork of my old writing program named Galaxywrite. It's meant to be as simple notes program similar to the Notepad program included in Microsoft Windows.")
+        showinfo("About SunmiNotes","This program is written in Python using Tkinter by Brendan Gass. It's a fork of my old writing program named Galaxywrite. It's meant to be as simple notes program similar to the Notepad program included in Microsoft Windows.")
   
     def __showDoc(self): 
-        showinfo("SunmiNotes","SunmiNotes dosen't support documents made by Microsoft Word yet. It supports txt and Python files.")
+        showinfo("Supported Formats","SunmiNotes dosen't support documents made by Microsoft Word yet. For now it supports txt and Python files.")
   
     def __openFile(self): 
           
         self.__file = askopenfilename(defaultextension=".txt", 
                                       filetypes=[("All Files","*.*"), 
                                         ("Text Documents","*.txt"),
-                                         ("Python Scripts","*.py")]) 
+                                         ("Python Scripts","*.py"),
+                                         ("Batch Scripts","*.bat"),
+                                         ("Sunmi Documents","*.sunmi")]) 
   
         if self.__file == "": 
               
@@ -140,7 +142,9 @@ class SunmiNotes:
                                             defaultextension=".txt", 
                                             filetypes=[("All Files","*.*"), 
                                                 ("Text Documents","*.txt"),
-                                                 ("Python Scripts","*.py")]) 
+                                                 ("Python Scripts","*.py"),
+                                                 ("Batch Scripts","*.bat"),
+                                                 ("Sunmi Documents","*.sunmi")]) 
   
             if self.__file == "": 
                 self.__file = None
