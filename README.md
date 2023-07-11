@@ -1,7 +1,7 @@
-# SunmiNotes
+# V_Editor
 Hi everyone
 
-This is my small Notepad-like program written in Python using Tkinter, datetime and keyboard libraries. It's named after the korean pop idol Lee Sun-mi.
+This is my small Notepad-like program written in Python using Tkinter, datetime and keyboard libraries. It's named after the korean pop idol Kim Tae-hyung.
 
 Tested on Windows 10 and 11.
 
@@ -11,4 +11,4 @@ Tested on Windows 10 and 11.
 
 
 
-<img src="https://github.com/BrendanGass/SunmiNotes/assets/94894839/6854e478-9098-4a4d-9923-86a4967b137b" alt="sunmi" width="350" height="350" /> 
+
