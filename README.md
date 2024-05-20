@@ -1,4 +1,8 @@
-# V_Editor
+## Developement stopped!
+This is now the legacy version of my V_Editor application. There will be no further developement. Check out my new .NET 2.0 version:
+- https://github.com/abrendan/V_EditorPro
+
+# V_Editor_Legacy
 Hi everyone
 
 This is my small Notepad-like program written in Python using Tkinter, datetime and keyboard libraries. It's named after the korean pop idol Kim Tae-hyung.
