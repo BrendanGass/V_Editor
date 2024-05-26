@@ -2,7 +2,7 @@
 This is now the legacy version of my V_Editor application. There will be no further developement. Check out my new .NET 2.0 version:
 - https://github.com/abrendan/V_EditorClassic
 
-# V_Editor_Legacy
+# V_EditorLegacy
 Hi everyone
 
 This is my small Notepad-like program written in Python using Tkinter, datetime and keyboard libraries. It's named after the korean pop idol Kim Tae-hyung.
