@@ -1,6 +1,6 @@
 ## Developement stopped!
 This is now the legacy version of my V_Editor application. There will be no further developement. Check out my new .NET 2.0 version:
-- https://github.com/abrendan/V_EditorPro
+- https://github.com/abrendan/V_EditorClassic
 
 # V_Editor_Legacy
 Hi everyone
